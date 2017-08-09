@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
     reload      = browserSync.reload;
 
-gulp.task('html', function(){
+gulp.task('html', ['sass'], function(){
     gulp.src('index.html')
         .pipe(reload({stream:true}))
         .pipe(notify('HTML Reload.'));
@@ -29,7 +29,7 @@ gulp.task('sass', function(){
         .pipe(notify('Sass compile.'))
 });
 
-gulp.task('autoprefixer', function () {
+gulp.task('autoprefixer', ['sass'], function () {
     var postcss      = require('gulp-postcss');
     var sourcemaps   = require('gulp-sourcemaps');
     var autoprefixer = require('autoprefixer');
@@ -42,7 +42,7 @@ gulp.task('autoprefixer', function () {
         .pipe(notify('Autoprefixer complete.'));
 });
 
-gulp.watch('sass/style.scss', ['sass','html']);
+gulp.watch('sass/style.scss', ['sass']);
 gulp.watch('index.html', ['html']);
 gulp.watch('./_css/*.*', ['autoprefixer']);
 gulp.watch('./css/style.css', ['html']);

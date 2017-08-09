@@ -92,6 +92,9 @@ header {
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 300; }
+      header nav .row .cta_button a:hover {
+        background-color: #5541AB;
+        border: 1px solid #5541AB; }
   header .blog_description .row h1 {
     color: #ffffff;
     margin-top: 92px;
@@ -111,6 +114,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch; }
@@ -207,5 +212,127 @@ header {
         margin-bottom: 2px;
         margin-top: 21px;
         border-bottom: 3px solid #40C4FF; }
+  .container-fluid .row.main_content .pagination_links ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .container-fluid .row.main_content .pagination_links ul li a {
+      width: 38px;
+      height: 38px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 18px;
+      line-height: 22px;
+      color: #A0A2B4;
+      text-decoration: none; }
+      .container-fluid .row.main_content .pagination_links ul li a.active_link, .container-fluid .row.main_content .pagination_links ul li a:hover {
+        border-radius: 2px;
+        background-color: #40C4FF;
+        color: #ffffff; }
+
+footer {
+  background-color: #A0A2B4;
+  margin-top: 68px;
+  padding-top: 78px;
+  padding-bottom: 56px; }
+  footer .footer_description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    footer .footer_description .about_us {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      footer .footer_description .about_us .spro_description p {
+        color: #040948;
+        font-size: 20px;
+        line-height: 25px;
+        max-width: 300px;
+        margin-top: 25px; }
+    footer .footer_description .contact_us p {
+      color: #040948;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 23px; }
+    footer .footer_description .contact_us .cta_button {
+      text-align: right; }
+      footer .footer_description .contact_us .cta_button a {
+        text-decoration: none;
+        padding: 10px 34px;
+        margin: 0px;
+        border: 1px solid #403181;
+        background-color: #403181;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 300; }
+        footer .footer_description .contact_us .cta_button a:hover {
+          background-color: #5541AB;
+          border: 1px solid #5541AB; }
+  footer .social_contacts .social_title {
+    color: #040948;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px; }
+  footer .social_contacts ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    footer .social_contacts ul li:last-child a {
+      margin-right: 0; }
+    footer .social_contacts ul li a {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      margin-right: 32px; }
+      footer .social_contacts ul li a.fb_link {
+        background-image: url("/images/facebook-logo.png"); }
+        footer .social_contacts ul li a.fb_link:hover {
+          background-image: url("/images/facebook-logo_wh.png");
+          background-color: #40c4ff; }
+      footer .social_contacts ul li a.be_link {
+        background-image: url("/images/behance-logo.png"); }
+        footer .social_contacts ul li a.be_link:hover {
+          background-image: url("/images/behance-logo_wh.png");
+          background-color: #3f307f; }
+      footer .social_contacts ul li a.ista_link {
+        background-image: url("/images/instagram-logo.png"); }
+        footer .social_contacts ul li a.ista_link:hover {
+          background-image: url("/images/instagram-logo_wh.png");
+          background-color: #fc3f7f; }
+      footer .social_contacts ul li a.in_link {
+        background-image: url("/images/linkedin-logo.png"); }
+        footer .social_contacts ul li a.in_link:hover {
+          background-image: url("/images/linkedin-logo_wh.png");
+          background-color: #fcd43f; }
+      footer .social_contacts ul li a.me_link {
+        background-image: url("/images/medium-logo.png"); }
+        footer .social_contacts ul li a.me_link:hover {
+          background-image: url("/images/medium-logo_wh.png");
+          background-color: #29B40D; }
 
 /*# sourceMappingURL=style.css.map */
