@@ -166,7 +166,10 @@ header{
           margin-top: 16px;
           display: flex;
           justify-content: flex-start;
-          span{line-height: 18px;}
+          span{
+            line-height: 18px;
+            color: #A0A2B4;
+          }
           .article_author{
             flex: 1;
           }
@@ -196,7 +199,7 @@ header{
           position:sticky;
           top: 147px;
         }
-        background-color: rgba(160, 162, 180, 0.5);
+        background-color: #FAFAFB;
         padding: 25px;
         .sidebar_header{
           display: flex;
@@ -270,7 +273,7 @@ header{
 }
 //Start Footer section
 footer{
-  background-color: #A0A2B4;
+  background-color: #F5F5F7;
   margin-top: 68px;
   padding-top: 78px;
   padding-bottom: 56px;

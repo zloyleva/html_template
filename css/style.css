@@ -141,7 +141,8 @@ header {
             -ms-flex-pack: start;
                 justify-content: flex-start; }
         .container-fluid .row.main_content .articles_list .article_item .article_params span {
-          line-height: 18px; }
+          line-height: 18px;
+          color: #A0A2B4; }
         .container-fluid .row.main_content .articles_list .article_item .article_params .article_author {
           -webkit-box-flex: 1;
               -ms-flex: 1;
@@ -162,7 +163,7 @@ header {
     -webkit-transition-duration: 1.5s;
             transition-duration: 1.5s;
     top: 0;
-    background-color: rgba(160, 162, 180, 0.5);
+    background-color: #FAFAFB;
     padding: 25px; }
     .container-fluid .row.main_content .right_sidebar .move_part.fixed_bar {
       position: -webkit-sticky;
@@ -244,7 +245,7 @@ header {
         color: #ffffff; }
 
 footer {
-  background-color: #A0A2B4;
+  background-color: #F5F5F7;
   margin-top: 68px;
   padding-top: 78px;
   padding-bottom: 56px; }
