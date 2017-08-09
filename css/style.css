@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Cerebri Sans";
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Light.eot);
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Light.ttf);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Light.eot);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Light.ttf);
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: "Cerebri Sans";
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Regular.eot);
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Regular.ttf);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Regular.eot);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Regular.ttf);
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: "Cerebri Sans";
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Bold.eot);
-  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Bold.ttf);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Bold.eot);
+  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Bold.ttf);
   font-weight: 700;
   font-style: normal; }
 
@@ -29,7 +29,7 @@ body * {
   font-weight: 300; }
 
 header {
-  background-image: url(/images/bg.png);
+  background-image: url(../images/bg.png);
   background-size: cover;
   background-position: center; }
   header nav.fixed_scroll_menu {
@@ -310,29 +310,29 @@ footer {
       background-color: #FFFFFF;
       margin-right: 32px; }
       footer .social_contacts ul li a.fb_link {
-        background-image: url("/images/facebook-logo.png"); }
+        background-image: url("../images/facebook-logo.png"); }
         footer .social_contacts ul li a.fb_link:hover {
-          background-image: url("/images/facebook-logo_wh.png");
+          background-image: url("../images/facebook-logo_wh.png");
           background-color: #40c4ff; }
       footer .social_contacts ul li a.be_link {
-        background-image: url("/images/behance-logo.png"); }
+        background-image: url("../images/behance-logo.png"); }
         footer .social_contacts ul li a.be_link:hover {
-          background-image: url("/images/behance-logo_wh.png");
+          background-image: url("../images/behance-logo_wh.png");
           background-color: #3f307f; }
       footer .social_contacts ul li a.ista_link {
-        background-image: url("/images/instagram-logo.png"); }
+        background-image: url("../images/instagram-logo.png"); }
         footer .social_contacts ul li a.ista_link:hover {
           background-image: url("/images/instagram-logo_wh.png");
           background-color: #fc3f7f; }
       footer .social_contacts ul li a.in_link {
-        background-image: url("/images/linkedin-logo.png"); }
+        background-image: url("../images/linkedin-logo.png"); }
         footer .social_contacts ul li a.in_link:hover {
-          background-image: url("/images/linkedin-logo_wh.png");
+          background-image: url("../images/linkedin-logo_wh.png");
           background-color: #fcd43f; }
       footer .social_contacts ul li a.me_link {
-        background-image: url("/images/medium-logo.png"); }
+        background-image: url("../images/medium-logo.png"); }
         footer .social_contacts ul li a.me_link:hover {
-          background-image: url("/images/medium-logo_wh.png");
+          background-image: url("../images/medium-logo_wh.png");
           background-color: #29B40D; }
 
 /*# sourceMappingURL=style.css.map */
