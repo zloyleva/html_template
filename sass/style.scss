@@ -1,0 +1,237 @@
+//Mixins
+
+@mixin clean_list{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+// Colors variables
+$white: #ffffff;
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Light.eot);
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Regular.eot);
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Regular.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Bold.eot);
+  src: url(/fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container{
+  @media (min-width: 1200px){
+    width: 1200px;
+  }
+}
+body *{
+  font-family: "Cerebri Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+header{
+  background-image: url(/images/bg.png);
+  background-size: cover;
+  background-position: center;
+  nav{
+    &.fixed_scroll_menu{
+      position: fixed;
+      width: 100%;
+      background-color: $white;
+      box-shadow: 0 1px 2px 0 #BDBDBD;
+      z-index: 100;
+      top: -80px;
+      transition-property: top;
+      transition-duration: 1.5s;
+      &.fixed_header{
+        top:0;
+      }
+      .container{
+        .row{
+          padding-top: 15px;
+          padding-bottom: 15px;
+          .logo_menu{
+            ul.header-navigation{
+              li{
+                a{
+                  color: #040948;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .row{
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      .logo_menu{
+        display: flex;
+        flex: 1;
+        .logo{
+          margin-right: 36px;
+        }
+        ul.header-navigation{
+          @include clean_list;
+          display: flex;
+          li{
+            margin: 0px 32px 0px 0px;
+            a{
+              text-decoration: none;
+              color: $white;
+              font-size: 18px;
+              line-height: 35px;
+            }
+          }
+        }
+      }
+
+      .cta_button{
+        a{
+          text-decoration: none;
+          padding: 10px 34px;
+          margin: 0px;
+          border: 1px solid #403181;
+          background-color: #403181;
+          color: $white;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .blog_description{
+    .row{
+      h1{
+        color: $white;
+        margin-top: 92px;
+        margin-bottom: 20px;
+        line-height: 61px;
+        max-width: 663px;
+        font-size: 48px;
+        font-weight: 500;
+      }
+      .short_description{
+        color: $white;
+        margin-bottom: 114px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+//Start main content
+.container-fluid{
+  .row.main_content{
+    margin: 0 1%;
+    padding-top: 72px;
+    display: flex;
+    align-items: stretch;
+    .left_invisible_sidebar{}
+    .articles_list{
+      display: flex;
+      flex-wrap: wrap;
+      .article_item{
+        width: 50%;
+        padding: 0px 25px;
+        margin-bottom: 50px;
+        .article_thumbnail{
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        .article_params{
+          margin-top: 16px;
+          display: flex;
+          justify-content: flex-start;
+          span{line-height: 18px;}
+          .article_author{
+            flex: 1;
+          }
+        }
+        .article_title{
+          h2{
+            font-weight: 700;
+            color: #040948;
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 6px;
+          }
+          .article_description{
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    .right_sidebar{
+      .move_part{
+        position: relative;
+        transition-property: top;
+        transition-duration: 1.5s;
+        top: 0;
+        &.fixed_bar{
+          position:sticky;
+          top: 147px;
+        }
+        background-color: rgba(160, 162, 180, 0.5);
+        padding: 25px;
+        .sidebar_header{
+          display: flex;
+          align-items: center;
+          margin-bottom: 27px;
+          .category_title{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            opacity: 0.8;
+            color: #040948;
+            flex: 1;
+          }
+        }
+        ul.category_items_list{
+          @include clean_list;
+          li.category_item{
+            a{
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 21px;
+              opacity: 0.8;
+              color: #040948;
+              text-decoration: none;
+              display: block;
+              padding-left: 12px;
+              margin-bottom: 4px;
+              margin-top: 21px;
+              border-bottom: 1px solid rgba(160, 162, 180, 0.2);
+              transition-property: font-size, line-height, color, margin-bottom, margin-top,border-bottom;
+              transition-duration: 0.2s;
+            }
+            &.active a, &:hover a{
+              font-size: 30px;
+              line-height: 38px;
+              color: #40C4FF;
+              margin-bottom: 2px;
+              margin-top: 21px;
+              border-bottom: 3px solid #40C4FF;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 
 gulp.task('html', function(){
     gulp.src('index.html')
-        .pipe(reload({stream:true}));
+        .pipe(reload({stream:true}))
+        .pipe(notify('HTML Reload.'));
 });
 
 gulp.task('browserSync', function() {
@@ -41,8 +42,10 @@ gulp.task('autoprefixer', function () {
         .pipe(notify('Autoprefixer complete.'));
 });
 
-gulp.watch('sass/style.scss', ['sass']);
+gulp.watch('sass/style.scss', ['sass','html']);
 gulp.watch('index.html', ['html']);
 gulp.watch('./_css/*.*', ['autoprefixer']);
+gulp.watch('./css/style.css', ['html']);
+gulp.watch('./scripts/script.js', ['html']);
 
 gulp.task('default', ['sass', 'browserSync', 'autoprefixer']);
