@@ -167,6 +167,13 @@ header{
 
       // If it's Main page
       .article_item{
+        &:hover{
+          .article_title{
+            h2{
+              color: #40C4FF;
+            }
+          }
+        }
         text-decoration: none;
         width: 50%;
         padding: 0px 25px;
