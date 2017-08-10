@@ -35,5 +35,17 @@
             }
         }
 
+        $(document).on('click', 'a.show_search_button', function (event) {
+            event.preventDefault();
+            console.log('SHOW SEARCH');
+            $('.search_section').addClass('show_search');
+        })
+
+        $(document).on('click', 'a.search_close_button', function (event) {
+            event.preventDefault();
+            console.log('HIDE SEARCH');
+            $('.search_section').removeClass('show_search');
+        })
+
     });
 })(jQuery)

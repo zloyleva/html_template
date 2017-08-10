@@ -148,6 +148,7 @@ header{
 }
 //Start main content
 .container-fluid{
+  position: relative;
   .row.main_content{
     margin: 0 1%;
     padding-top: 72px;
@@ -470,6 +471,65 @@ footer{
               background-color: #29B40D;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// Search section
+.search_section{
+  &.show_search{
+    left: 0;
+  }
+  position: fixed;
+  transition-property: left;
+  transition-duration: 1.5s;
+  top: 0;
+  left: 3500px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 200;
+  padding-top: 80px;
+  .container{
+    .row{
+      div{
+        .search_input{
+          input{
+            opacity: 0.3;
+            color: #040948;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 61px;
+            background: transparent;
+            overflow-x: scroll;
+            border: none;
+            outline: none;
+          }
+        }
+        .blog_search_results{
+          p{
+            opacity: 0.3;
+            color: #040948;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21px;
+            margin-top: 40px;
+          }
+        }
+      }
+
+      div.close_section{
+        display: flex;
+        justify-content: flex-end;
+        a.search_close_button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
         }
       }
     }
