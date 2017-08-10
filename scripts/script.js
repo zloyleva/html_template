@@ -16,13 +16,10 @@
             mainContent = $('.main_content');
             headerMenu = $('.fixed_scroll_menu');
             mainContentPosition = mainContent.position();
-
-            console.log(mainContentPosition);
         });
 
         window.onscroll = function() {
             if(window.pageYOffset > mainContentPosition.top){
-                console.log(window.pageYOffset);
                 $(headerMenu).addClass('fixed_header');
             }else{
                 $(headerMenu).removeClass('fixed_header');
@@ -33,19 +30,36 @@
             }else {
                 $(rightSidebarMove).removeClass('fixed_bar');
             }
-        }
+        };
 
         $(document).on('click', 'a.show_search_button', function (event) {
             event.preventDefault();
-            console.log('SHOW SEARCH');
             $('.search_section').addClass('show_search');
-        })
+            $('body').addClass('dont_scroll');
+        });
 
         $(document).on('click', 'a.search_close_button', function (event) {
             event.preventDefault();
-            console.log('HIDE SEARCH');
             $('.search_section').removeClass('show_search');
-        })
+            $('body').removeClass('dont_scroll');
+            clearSearch();
+        });
+
+        $('input.blog-search-input').on('input keyup', function(e) {
+            var inputString = $('input.blog-search-input').prop('value');
+            if(inputString.length > 0){
+                $('input.blog-search-input').css('opacity', '0.8');
+                $('.search_result_posts').show();
+            }else {
+                clearSearch();
+                $('input.blog-search-input').css('opacity', '0.3');
+            }
+        });
+
+        function clearSearch(){
+            $('input.blog-search-input').prop('value', '');
+            $('.search_result_posts').hide();
+        }
 
     });
-})(jQuery)
+})(jQuery);

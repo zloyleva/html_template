@@ -24,9 +24,12 @@
     width: 1200px; } }
 
 body * {
-  font-family: "Cerebri Sans",Helvetica,Arial,sans-serif;
+  font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 300; }
+
+body.dont_scroll {
+  overflow: hidden; }
 
 header {
   background-size: cover;
@@ -114,9 +117,9 @@ header {
       margin-bottom: 0px;
       font-size: 20px; }
 
-.container-fluid {
+.container-fluid, .for_search {
   position: relative; }
-  .container-fluid .row.main_content {
+  .container-fluid .row.main_content, .container-fluid .row.search_result_posts, .for_search .row.main_content, .for_search .row.search_result_posts {
     margin: 0 1%;
     padding-top: 72px;
     display: -webkit-box;
@@ -130,20 +133,21 @@ header {
     /*
     *  If it's Single POST
     */ }
-    .container-fluid .row.main_content .articles_list {
+    .container-fluid .row.main_content .articles_list, .container-fluid .row.search_result_posts .articles_list, .for_search .row.main_content .articles_list, .for_search .row.search_result_posts .articles_list {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .container-fluid .row.main_content .articles_list .article_item {
+      .container-fluid .row.main_content .articles_list .article_item, .container-fluid .row.search_result_posts .articles_list .article_item, .for_search .row.main_content .articles_list .article_item, .for_search .row.search_result_posts .articles_list .article_item {
+        text-decoration: none;
         width: 50%;
         padding: 0px 25px;
         margin-bottom: 50px; }
-        .container-fluid .row.main_content .articles_list .article_item .article_thumbnail img {
+        .container-fluid .row.main_content .articles_list .article_item .article_thumbnail img, .container-fluid .row.search_result_posts .articles_list .article_item .article_thumbnail img, .for_search .row.main_content .articles_list .article_item .article_thumbnail img, .for_search .row.search_result_posts .articles_list .article_item .article_thumbnail img {
           width: 100%;
           height: auto; }
-        .container-fluid .row.main_content .articles_list .article_item .article_params {
+        .container-fluid .row.main_content .articles_list .article_item .article_params, .container-fluid .row.search_result_posts .articles_list .article_item .article_params, .for_search .row.main_content .articles_list .article_item .article_params, .for_search .row.search_result_posts .articles_list .article_item .article_params {
           margin-top: 16px;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -151,61 +155,62 @@ header {
           -webkit-box-pack: start;
               -ms-flex-pack: start;
                   justify-content: flex-start; }
-          .container-fluid .row.main_content .articles_list .article_item .article_params span {
+          .container-fluid .row.main_content .articles_list .article_item .article_params span, .container-fluid .row.search_result_posts .articles_list .article_item .article_params span, .for_search .row.main_content .articles_list .article_item .article_params span, .for_search .row.search_result_posts .articles_list .article_item .article_params span {
             line-height: 18px;
             color: #A0A2B4; }
-          .container-fluid .row.main_content .articles_list .article_item .article_params .article_author {
+          .container-fluid .row.main_content .articles_list .article_item .article_params .article_author, .container-fluid .row.search_result_posts .articles_list .article_item .article_params .article_author, .for_search .row.main_content .articles_list .article_item .article_params .article_author, .for_search .row.search_result_posts .articles_list .article_item .article_params .article_author {
             -webkit-box-flex: 1;
                 -ms-flex: 1;
                     flex: 1; }
-        .container-fluid .row.main_content .articles_list .article_item .article_title h2 {
+        .container-fluid .row.main_content .articles_list .article_item .article_title h2, .container-fluid .row.search_result_posts .articles_list .article_item .article_title h2, .for_search .row.main_content .articles_list .article_item .article_title h2, .for_search .row.search_result_posts .articles_list .article_item .article_title h2 {
           font-weight: 700;
           color: #040948;
           font-size: 20px;
           line-height: 28px;
           margin-top: 6px; }
-        .container-fluid .row.main_content .articles_list .article_item .article_title .article_description {
+        .container-fluid .row.main_content .articles_list .article_item .article_description, .container-fluid .row.search_result_posts .articles_list .article_item .article_description, .for_search .row.main_content .articles_list .article_item .article_description, .for_search .row.search_result_posts .articles_list .article_item .article_description {
           font-size: 16px;
-          line-height: 22px; }
-    .container-fluid .row.main_content .post_description .post_text h2 {
+          line-height: 22px;
+          color: #040948; }
+    .container-fluid .row.main_content .post_description .post_text h2, .container-fluid .row.search_result_posts .post_description .post_text h2, .for_search .row.main_content .post_description .post_text h2, .for_search .row.search_result_posts .post_description .post_text h2 {
       color: #040948;
       font-size: 20px;
       font-weight: 700;
       line-height: 28px;
       margin-top: 42px; }
-    .container-fluid .row.main_content .post_description .post_text h3 {
+    .container-fluid .row.main_content .post_description .post_text h3, .container-fluid .row.search_result_posts .post_description .post_text h3, .for_search .row.main_content .post_description .post_text h3, .for_search .row.search_result_posts .post_description .post_text h3 {
       color: #040948;
       font-size: 16px;
       font-weight: 700;
       line-height: 28px; }
-    .container-fluid .row.main_content .post_description .post_text p {
+    .container-fluid .row.main_content .post_description .post_text p, .container-fluid .row.search_result_posts .post_description .post_text p, .for_search .row.main_content .post_description .post_text p, .for_search .row.search_result_posts .post_description .post_text p {
       color: #040948;
       font-size: 16px;
       line-height: 22px; }
-    .container-fluid .row.main_content .post_description .post_text img {
+    .container-fluid .row.main_content .post_description .post_text img, .container-fluid .row.search_result_posts .post_description .post_text img, .for_search .row.main_content .post_description .post_text img, .for_search .row.search_result_posts .post_description .post_text img {
       width: 100%;
       height: auto;
       margin-bottom: 16px; }
-    .container-fluid .row.main_content .post_description .post_text ol {
+    .container-fluid .row.main_content .post_description .post_text ol, .container-fluid .row.search_result_posts .post_description .post_text ol, .for_search .row.main_content .post_description .post_text ol, .for_search .row.search_result_posts .post_description .post_text ol {
       padding-left: 30px;
       margin-bottom: 22px; }
-      .container-fluid .row.main_content .post_description .post_text ol li {
+      .container-fluid .row.main_content .post_description .post_text ol li, .container-fluid .row.search_result_posts .post_description .post_text ol li, .for_search .row.main_content .post_description .post_text ol li, .for_search .row.search_result_posts .post_description .post_text ol li {
         color: #040948;
         font-size: 16px;
         line-height: 22px;
         padding-left: 10px; }
-    .container-fluid .row.main_content .post_description .divider {
+    .container-fluid .row.main_content .post_description .divider, .container-fluid .row.search_result_posts .post_description .divider, .for_search .row.main_content .post_description .divider, .for_search .row.search_result_posts .post_description .divider {
       border: 1px solid #040948;
       opacity: 0.2;
       margin-top: 30px;
       margin-bottom: 30px; }
-    .container-fluid .row.main_content .post_description .post_author {
+    .container-fluid .row.main_content .post_description .post_author, .container-fluid .row.search_result_posts .post_description .post_author, .for_search .row.main_content .post_description .post_author, .for_search .row.search_result_posts .post_description .post_author {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .container-fluid .row.main_content .post_description .post_author .post_author_avatar {
+      .container-fluid .row.main_content .post_description .post_author .post_author_avatar, .container-fluid .row.search_result_posts .post_description .post_author .post_author_avatar, .for_search .row.main_content .post_description .post_author .post_author_avatar, .for_search .row.search_result_posts .post_description .post_author .post_author_avatar {
         margin-right: 16px; }
-      .container-fluid .row.main_content .post_description .post_author .author_meta_data {
+      .container-fluid .row.main_content .post_description .post_author .author_meta_data, .container-fluid .row.search_result_posts .post_description .post_author .author_meta_data, .for_search .row.main_content .post_description .post_author .author_meta_data, .for_search .row.search_result_posts .post_description .post_author .author_meta_data {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -216,31 +221,31 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        .container-fluid .row.main_content .post_description .post_author .author_meta_data p {
+        .container-fluid .row.main_content .post_description .post_author .author_meta_data p, .container-fluid .row.search_result_posts .post_description .post_author .author_meta_data p, .for_search .row.main_content .post_description .post_author .author_meta_data p, .for_search .row.search_result_posts .post_description .post_author .author_meta_data p {
           margin: 0;
           color: #040948; }
-        .container-fluid .row.main_content .post_description .post_author .author_meta_data .author_name {
+        .container-fluid .row.main_content .post_description .post_author .author_meta_data .author_name, .container-fluid .row.search_result_posts .post_description .post_author .author_meta_data .author_name, .for_search .row.main_content .post_description .post_author .author_meta_data .author_name, .for_search .row.search_result_posts .post_description .post_author .author_meta_data .author_name {
           font-size: 20px;
           font-weight: 700;
           line-height: 25px; }
-        .container-fluid .row.main_content .post_description .post_author .author_meta_data .author_status {
+        .container-fluid .row.main_content .post_description .post_author .author_meta_data .author_status, .container-fluid .row.search_result_posts .post_description .post_author .author_meta_data .author_status, .for_search .row.main_content .post_description .post_author .author_meta_data .author_status, .for_search .row.search_result_posts .post_description .post_author .author_meta_data .author_status {
           -webkit-box-flex: 1;
               -ms-flex: 1;
                   flex: 1;
           font-size: 16px;
           line-height: 21px; }
-        .container-fluid .row.main_content .post_description .post_author .author_meta_data .post_date {
+        .container-fluid .row.main_content .post_description .post_author .author_meta_data .post_date, .container-fluid .row.search_result_posts .post_description .post_author .author_meta_data .post_date, .for_search .row.main_content .post_description .post_author .author_meta_data .post_date, .for_search .row.search_result_posts .post_description .post_author .author_meta_data .post_date {
           color: #A0A2B4;
           font-size: 16px;
           line-height: 21px; }
-      .container-fluid .row.main_content .post_description .post_author .author_social_link {
+      .container-fluid .row.main_content .post_description .post_author .author_social_link, .container-fluid .row.search_result_posts .post_description .post_author .author_social_link, .for_search .row.main_content .post_description .post_author .author_social_link, .for_search .row.search_result_posts .post_description .post_author .author_social_link {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-align: end;
             -ms-flex-align: end;
                 align-items: flex-end; }
-        .container-fluid .row.main_content .post_description .post_author .author_social_link a {
+        .container-fluid .row.main_content .post_description .post_author .author_social_link a, .container-fluid .row.search_result_posts .post_description .post_author .author_social_link a, .for_search .row.main_content .post_description .post_author .author_social_link a, .for_search .row.search_result_posts .post_description .post_author .author_social_link a {
           height: 40px;
           width: 40px;
           display: -webkit-box;
@@ -252,7 +257,7 @@ header {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; }
-    .container-fluid .row.main_content .right_sidebar .move_part {
+    .container-fluid .row.main_content .right_sidebar .move_part, .container-fluid .row.search_result_posts .right_sidebar .move_part, .for_search .row.main_content .right_sidebar .move_part, .for_search .row.search_result_posts .right_sidebar .move_part {
       position: relative;
       -webkit-transition-property: top;
       transition-property: top;
@@ -261,11 +266,11 @@ header {
       top: 0;
       background-color: #FAFAFB;
       padding: 25px; }
-      .container-fluid .row.main_content .right_sidebar .move_part.fixed_bar {
+      .container-fluid .row.main_content .right_sidebar .move_part.fixed_bar, .container-fluid .row.search_result_posts .right_sidebar .move_part.fixed_bar, .for_search .row.main_content .right_sidebar .move_part.fixed_bar, .for_search .row.search_result_posts .right_sidebar .move_part.fixed_bar {
         position: -webkit-sticky;
         position: sticky;
         top: 147px; }
-      .container-fluid .row.main_content .right_sidebar .move_part .sidebar_header {
+      .container-fluid .row.main_content .right_sidebar .move_part .sidebar_header, .container-fluid .row.search_result_posts .right_sidebar .move_part .sidebar_header, .for_search .row.main_content .right_sidebar .move_part .sidebar_header, .for_search .row.search_result_posts .right_sidebar .move_part .sidebar_header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -273,22 +278,22 @@ header {
             -ms-flex-align: center;
                 align-items: center;
         margin-bottom: 27px; }
-        .container-fluid .row.main_content .right_sidebar .move_part .sidebar_header .category_title {
+        .container-fluid .row.main_content .right_sidebar .move_part .sidebar_header .category_title, .container-fluid .row.search_result_posts .right_sidebar .move_part .sidebar_header .category_title, .for_search .row.main_content .right_sidebar .move_part .sidebar_header .category_title, .for_search .row.search_result_posts .right_sidebar .move_part .sidebar_header .category_title {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 500;
           line-height: 30px;
           opacity: 0.8;
           color: #040948;
           -webkit-box-flex: 1;
               -ms-flex: 1;
                   flex: 1; }
-      .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list {
+      .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list, .container-fluid .row.search_result_posts .right_sidebar .move_part ul.category_items_list, .for_search .row.main_content .right_sidebar .move_part ul.category_items_list, .for_search .row.search_result_posts .right_sidebar .move_part ul.category_items_list {
         list-style: none;
         padding: 0px;
         margin: 0px; }
-        .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item a {
+        .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item a, .container-fluid .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item a, .for_search .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item a, .for_search .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item a {
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 500;
           line-height: 21px;
           opacity: 0.8;
           color: #040948;
@@ -302,14 +307,14 @@ header {
           transition-property: font-size, line-height, color, margin-bottom, margin-top,border-bottom;
           -webkit-transition-duration: 0.2s;
                   transition-duration: 0.2s; }
-        .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item.active a, .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item:hover a {
+        .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item.active a, .container-fluid .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item:hover a, .container-fluid .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item.active a, .container-fluid .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item:hover a, .for_search .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item.active a, .for_search .row.main_content .right_sidebar .move_part ul.category_items_list li.category_item:hover a, .for_search .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item.active a, .for_search .row.search_result_posts .right_sidebar .move_part ul.category_items_list li.category_item:hover a {
           font-size: 30px;
           line-height: 38px;
           color: #40C4FF;
           margin-bottom: 2px;
           margin-top: 21px;
           border-bottom: 3px solid #40C4FF; }
-    .container-fluid .row.main_content .pagination_links ul {
+    .container-fluid .row.main_content .pagination_links ul, .container-fluid .row.search_result_posts .pagination_links ul, .for_search .row.main_content .pagination_links ul, .for_search .row.search_result_posts .pagination_links ul {
       list-style: none;
       padding: 0px;
       margin: 0px;
@@ -319,7 +324,7 @@ header {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      .container-fluid .row.main_content .pagination_links ul li a {
+      .container-fluid .row.main_content .pagination_links ul li a, .container-fluid .row.search_result_posts .pagination_links ul li a, .for_search .row.main_content .pagination_links ul li a, .for_search .row.search_result_posts .pagination_links ul li a {
         width: 38px;
         height: 38px;
         display: -webkit-box;
@@ -335,7 +340,7 @@ header {
         line-height: 22px;
         color: #A0A2B4;
         text-decoration: none; }
-        .container-fluid .row.main_content .pagination_links ul li a.active_link, .container-fluid .row.main_content .pagination_links ul li a:hover {
+        .container-fluid .row.main_content .pagination_links ul li a.active_link, .container-fluid .row.main_content .pagination_links ul li a:hover, .container-fluid .row.search_result_posts .pagination_links ul li a.active_link, .container-fluid .row.search_result_posts .pagination_links ul li a:hover, .for_search .row.main_content .pagination_links ul li a.active_link, .for_search .row.main_content .pagination_links ul li a:hover, .for_search .row.search_result_posts .pagination_links ul li a.active_link, .for_search .row.search_result_posts .pagination_links ul li a:hover {
           border-radius: 2px;
           background-color: #40C4FF;
           color: #ffffff; }
@@ -444,10 +449,11 @@ footer {
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 200;
-  padding-top: 80px; }
+  padding-top: 80px;
+  overflow: auto; }
   .search_section.show_search {
     left: 0; }
-  .search_section .container .row div .search_input input {
+  .search_section .for_search .row div .search_input input {
     opacity: 0.3;
     color: #040948;
     font-size: 48px;
@@ -457,21 +463,21 @@ footer {
     overflow-x: scroll;
     border: none;
     outline: none; }
-  .search_section .container .row div .blog_search_results p {
+  .search_section .for_search .row div .blog_search_results p {
     opacity: 0.3;
     color: #040948;
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
     margin-top: 40px; }
-  .search_section .container .row div.close_section {
+  .search_section .for_search .row div.close_section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-    .search_section .container .row div.close_section a.search_close_button {
+    .search_section .for_search .row div.close_section a.search_close_button {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -484,5 +490,7 @@ footer {
       width: 50px;
       height: 50px;
       cursor: pointer; }
+  .search_section .for_search .row.search_result_posts {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */
