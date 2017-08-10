@@ -43,7 +43,7 @@ gulp.task('autoprefixer', ['sass'], function () {
 });
 
 gulp.watch('sass/style.scss', ['sass']);
-gulp.watch('index.html', ['html']);
+gulp.watch('*.html', ['html']);
 gulp.watch('./_css/*.*', ['autoprefixer']);
 gulp.watch('./css/style.css', ['html']);
 gulp.watch('./scripts/script.js', ['html']);

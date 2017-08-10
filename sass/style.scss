@@ -57,7 +57,6 @@ body *{
 }
 
 header{
-  background-image: url(../images/bg.png);
   background-size: cover;
   background-position: center;
   nav{
@@ -123,18 +122,25 @@ header{
   }
   .blog_description{
     .row{
+      margin-top: 92px;
+      margin-bottom: 114px;
       h1{
         color: $white;
-        margin-top: 92px;
+        margin-top: 0px;
         margin-bottom: 20px;
         line-height: 61px;
         max-width: 663px;
         font-size: 48px;
         font-weight: 500;
+        &.single_post{
+          margin-bottom: 88px;
+          max-width: 100%;
+          text-align: center;
+        }
       }
       .short_description{
         color: $white;
-        margin-bottom: 114px;
+        margin-bottom: 0px;
         font-size: 20px;
       }
     }
@@ -152,6 +158,8 @@ header{
     .articles_list{
       display: flex;
       flex-wrap: wrap;
+
+      // If it's Main page
       .article_item{
         width: 50%;
         padding: 0px 25px;
@@ -189,6 +197,100 @@ header{
         }
       }
     }
+
+    /*
+    *  If it's Single POST
+    */
+    .post_description{
+      .post_text{
+        h2{
+          color: #040948;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 28px;
+          margin-top: 42px;
+        }
+        h3{
+          color: #040948;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+        p{
+          color: #040948;
+          font-size: 16px;
+          line-height: 22px;
+        }
+        img{
+          width: 100%;
+          height: auto;
+          margin-bottom: 16px;
+        }
+        ol{
+          padding-left: 30px;
+          margin-bottom: 22px;
+          li{
+            color: #040948;
+            font-size: 16px;
+            line-height: 22px;
+            padding-left: 10px;
+          }
+        }
+      }
+      .divider{
+        border: 1px solid #040948;
+        opacity: 0.2;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .post_author{
+        display: flex;
+        .post_author_avatar{
+          margin-right: 16px;
+          img{}
+        }
+        .author_meta_data{
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          p{
+            margin: 0;
+            color: #040948;
+          }
+          .author_name{
+
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 25px;
+          }
+          .author_status{
+            flex: 1;
+            font-size: 16px;
+            line-height: 21px;
+          }
+          .post_date{
+            color: #A0A2B4;
+            font-size: 16px;
+            line-height: 21px;
+          }
+        }
+        .author_social_link{
+          display: flex;
+          align-items: flex-end;
+          a{
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+
+            }
+          }
+        }
+      }
+    }
+
     .right_sidebar{
       .move_part{
         position: relative;
