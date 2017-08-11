@@ -72,8 +72,16 @@
   display: flex;
   .logo{
     margin-right: 36px;
+    a{
+      display: block;
+      width: 165px;
+      height: 26px;
+      background-image: url("../images/logo_s_pro_blog.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
-  .mobile_section{
+  .mobile_section_hide{
     flex: 1;
     ul.header-navigation{
       flex: 1;
@@ -93,6 +101,25 @@
     .cta_button{
       a{
         @include cta_button;
+      }
+    }
+  }
+  .mobile_section_show{
+    align-items: center;
+    .show_search_button{
+      color: $white;
+      font-size: 16px;
+      margin-right: 11px;
+    }
+    .hamburger_button{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 14px;
+      span.line_item{
+        display: block;
+        border-bottom: 2px solid $white;
       }
     }
   }

@@ -18,12 +18,13 @@
 <body>
     <!-- Start Header -->
     <header class="container-fluid" style="background-image: url(./images/bg.png);">
-        <nav class="row navigation_section static">
+
+        <nav class="row navigation_section">
             <div class="container">
                 <div class="logo">
-                    <a href="#"><img src="./images/logo_s_pro_blog.png" alt=""></a>
+                    <a href="#"></a>
                 </div>
-                <div class="mobile_section">
+                <div class="mobile_section_hide">
                     <ul class="header-navigation">
                         <li><a href="#">About</a></li>
                         <li><a href="#">Case studies</a></li>
@@ -33,30 +34,16 @@
                     <div class="cta_button">
                         <a href="#" class="btn">Contact us</a>
                     </div>
+                </div>
+                <div class="mobile_section_show">
+                    <a class="show_search_button" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="" class="hamburger_button"><span class="line_item"></span><span class="line_item"></span><span
+                            class="line_item"></span></i></a>
                 </div>
             </div>
         </nav>
 
-        <!-- This is scroll down menu -->
-        <nav class="row navigation_section fixed_scroll_menu" >
-            <div class="container">
-                <div class="logo">
-                    <a href="#"><img src="./images/logo_s_pro_blog_rename.png" alt=""></a>
-                </div>
-                <div class="mobile_section">
-                    <ul class="header-navigation">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Case studies</a></li>
-                        <li><a href="#">Technologies</a></li>
-                        <li><a href="#">Services</a></li>
-                    </ul>
-                    <div class="cta_button">
-                        <a href="#" class="btn">Contact us</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- End scroll down menu -->
+        <div class="minimal_height_menu"></div>
 
         <div class="container blog_description">
             <div class="row">

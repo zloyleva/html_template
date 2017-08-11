@@ -26,11 +26,11 @@ header{
   background-size: cover;
   background-position: center;
   nav.navigation_section{
-    &.static{
-      .container{
-        padding-top: 30px;
-        @include top_menu;
-      }
+    position: absolute;
+    width: 100%;
+    .container{
+      padding-top: 30px;
+      @include top_menu;
     }
     &.fixed_scroll_menu{
       position: fixed;
@@ -40,7 +40,7 @@ header{
       z-index: 100;
       top: -80px;
       transition-property: top;
-      transition-duration: 1.5s;
+      transition-duration: 0.8s;
       &.fixed_header{
         top:0;
       }
@@ -48,7 +48,12 @@ header{
         @include top_menu;
         padding-top: 15px;
         padding-bottom: 15px;
-        .mobile_section{
+        .logo{
+          a{
+            background-image: url("../images/logo_s_pro_blog_rename.png");
+          }
+        }
+        .mobile_section_hide{
           ul.header-navigation{
             li{
               a{
@@ -57,8 +62,21 @@ header{
             }
           }
         }
+        .mobile_section_show{
+          .show_search_button {
+            color: #040948;
+          }
+          .hamburger_button{
+            span.line_item{
+              border-color: #040948;
+            }
+          }
+        }
       }
     }
+  }
+  .minimal_height_menu{
+    height: 86px;
   }
   .blog_description{
     .row{
@@ -253,7 +271,7 @@ header{
       .move_part{
         position: relative;
         transition-property: top;
-        transition-duration: 1.5s;
+        transition-duration: 0.8s;
         top: 0;
         &.fixed_bar{
           position:sticky;

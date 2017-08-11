@@ -7,6 +7,7 @@
         var mainContent;
         var mainContentPosition;
         var headerMenu;
+        var menuHeight;
 
         $(document).ready(function() {
             rightSidebar = $('.right_sidebar');
@@ -14,13 +15,20 @@
             positionRightSidebar = rightSidebar.position();
 
             mainContent = $('.main_content');
-            headerMenu = $('.fixed_scroll_menu');
+            headerMenu = $('.navigation_section');
             mainContentPosition = mainContent.position();
+            menuHeight = $('.navigation_section').height()
         });
 
         window.onscroll = function() {
-            if(window.pageYOffset > mainContentPosition.top){
-                $(headerMenu).addClass('fixed_header');
+            if(window.pageYOffset > menuHeight){
+                $(headerMenu).addClass('fixed_scroll_menu');
+            }else{
+                $(headerMenu).removeClass('fixed_scroll_menu');
+            }
+
+            if(window.pageYOffset > $('header').height()){
+                $(headerMenu).addClass('fixed_header')
             }else{
                 $(headerMenu).removeClass('fixed_header');
             }
