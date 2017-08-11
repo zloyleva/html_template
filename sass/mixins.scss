@@ -1,0 +1,99 @@
+@import "media.scss";
+//Mixins
+
+@mixin clean_list{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+@mixin cta_button{
+  text-decoration: none;
+  padding: 10px 34px;
+  margin: 0px;
+  border: 1px solid #403181;
+  background-color: #403181;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  &:hover{
+    background-color: #5541AB;
+    border: 1px solid #5541AB;
+  }
+}
+
+@mixin show_one_post{
+  &:hover{
+    .article_title{
+      h2{
+        color: #40C4FF;
+      }
+    }
+  }
+  text-decoration: none;
+  margin-bottom: 50px;
+  .article_thumbnail{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .article_params{
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    span{
+      line-height: 18px;
+      color: #A0A2B4;
+    }
+    .article_author{
+      flex: 1;
+    }
+  }
+  .article_title{
+    h2{
+      font-weight: 700;
+      color: #040948;
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 6px;
+    }
+  }
+  .article_description{
+    font-size: 16px;
+    line-height: 22px;
+    color: #040948;
+  }
+}
+
+@mixin top_menu{
+  display: flex;
+  align-items: center;
+  display: flex;
+  .logo{
+    margin-right: 36px;
+  }
+  .mobile_section{
+    flex: 1;
+    ul.header-navigation{
+      flex: 1;
+      align-items: flex-end;
+      @include clean_list;
+      display: flex;
+      li{
+        margin: 0px 32px 0px 0px;
+        a{
+          text-decoration: none;
+          color: $white;
+          font-size: 18px;
+          line-height: 35px;
+        }
+      }
+    }
+    .cta_button{
+      a{
+        @include cta_button;
+      }
+    }
+  }
+}

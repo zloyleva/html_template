@@ -18,42 +18,38 @@
 <body>
     <!-- Start Header -->
     <header class="container-fluid" style="background-image: url(./images/bg.png);">
-        <nav class="container">
-            <div class="row">
-                <div class="logo_menu">
-                    <div class="logo">
-                        <a href="#"><img src="./images/logo_s_pro_blog.png" alt=""></a>
-                    </div>
+        <nav class="row navigation_section static">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo_s_pro_blog.png" alt=""></a>
+                </div>
+                <div class="mobile_section">
                     <ul class="header-navigation">
                         <li><a href="#">About</a></li>
                         <li><a href="#">Case studies</a></li>
                         <li><a href="#">Technologies</a></li>
                         <li><a href="#">Services</a></li>
                     </ul>
-                </div>
-
-                <div class="cta_button">
-                    <a href="#" class="btn">Contact us</a>
+                    <div class="cta_button">
+                        <a href="#" class="btn">Contact us</a>
+                    </div>
                 </div>
             </div>
         </nav>
 
         <!-- This is scroll down menu -->
-        <nav class="row fixed_scroll_menu">
+        <nav class="row navigation_section fixed_scroll_menu" >
             <div class="container">
-                <div class="row">
-                    <div class="logo_menu">
-                        <div class="logo">
-                            <a href="#"><img src="./images/logo_s_pro_blog_rename.png" alt=""></a>
-                        </div>
-                        <ul class="header-navigation">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case studies</a></li>
-                            <li><a href="#">Technologies</a></li>
-                            <li><a href="#">Services</a></li>
-                        </ul>
-                    </div>
-
+                <div class="logo">
+                    <a href="#"><img src="./images/logo_s_pro_blog_rename.png" alt=""></a>
+                </div>
+                <div class="mobile_section">
+                    <ul class="header-navigation">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Case studies</a></li>
+                        <li><a href="#">Technologies</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
                     <div class="cta_button">
                         <a href="#" class="btn">Contact us</a>
                     </div>
@@ -74,8 +70,8 @@
     <!-- Start main content -->
     <div class="container-fluid">
         <div class="row main_content">
-            <div class="left_invisible_sidebar col-sm-2"> </div>
-            <div class="articles_list col-sm-8">
+            <div class="left_invisible_sidebar col-2">DELETE IT</div>
+            <div class="articles_list col-8">
 
                 <!-- Single article -->
                 <a href="post.html" class="article_item">
@@ -174,7 +170,7 @@
 
             </div>
 
-            <div class="right_sidebar col-sm-2">
+            <div class="right_sidebar col-2">
                 <div class="move_part">
                     <div class="sidebar_header">
                         <span class="category_title">Category</span>
@@ -191,6 +187,8 @@
                 </div>
             </div>
 
+        </div>
+        <div class="row pagination_section">
             <!-- Pagination -->
             <div class="col-sm-12 pagination_links">
                 <ul>
@@ -246,9 +244,9 @@
 
         <div class="container-fluid for_search">
 
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8">
+            <div class="row flex_inline">
+                <div class="col-2"></div>
+                <div class="col-8">
                     <div class="search_input">
                         <input class="blog-search-input" type="text" placeholder="Type to search" autofocus="">
                     </div>
@@ -256,7 +254,7 @@
                         <p>Please type with some different words.</p>
                     </div>
                 </div>
-                <div class="col-sm-2 close_section">
+                <div class="col-2 close_section">
                     <a title="Close" class="search_close_button"><img src="./images/x.png" alt=""></a>
                 </div>
             </div>

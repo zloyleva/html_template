@@ -42,7 +42,7 @@ gulp.task('autoprefixer', ['sass'], function () {
         .pipe(notify('Autoprefixer complete.'));
 });
 
-gulp.watch('sass/style.scss', ['sass']);
+gulp.watch('sass/*.scss', ['sass']);
 gulp.watch('*.html', ['html']);
 gulp.watch('./_css/*.*', ['autoprefixer']);
 gulp.watch('./css/style.css', ['html']);

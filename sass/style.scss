@@ -1,49 +1,10 @@
-//Mixins
+@import 'mixins.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
 
-@mixin clean_list{
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-@mixin cta_button{
-  text-decoration: none;
-  padding: 10px 34px;
-  margin: 0px;
-  border: 1px solid #403181;
-  background-color: #403181;
-  color: $white;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 300;
-  &:hover{
-    background-color: #5541AB;
-    border: 1px solid #5541AB;
-  }
-}
+@import "media.scss";
 
-// Colors variables
-$white: #ffffff;
-@font-face {
-  font-family: "Cerebri Sans";
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Light.eot);
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Light.ttf);
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cerebri Sans";
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Regular.eot);
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Regular.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cerebri Sans";
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/WEB/CerebriSans-Bold.eot);
-  src: url(../fonts/Cerebri-Sans/Cerebri-Sans/TTF/CerebriSans-Bold.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
+
 
 .container{
   @media (min-width: 1200px){
@@ -64,7 +25,13 @@ body{
 header{
   background-size: cover;
   background-position: center;
-  nav{
+  nav.navigation_section{
+    &.static{
+      .container{
+        padding-top: 30px;
+        @include top_menu;
+      }
+    }
     &.fixed_scroll_menu{
       position: fixed;
       width: 100%;
@@ -78,49 +45,17 @@ header{
         top:0;
       }
       .container{
-        .row{
-          padding-top: 15px;
-          padding-bottom: 15px;
-          .logo_menu{
-            ul.header-navigation{
-              li{
-                a{
-                  color: #040948;
-                }
+        @include top_menu;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .mobile_section{
+          ul.header-navigation{
+            li{
+              a{
+                color: #040948;
               }
             }
           }
-        }
-      }
-    }
-    .row{
-      padding-top: 30px;
-      display: flex;
-      align-items: center;
-      .logo_menu{
-        display: flex;
-        flex: 1;
-        .logo{
-          margin-right: 36px;
-        }
-        ul.header-navigation{
-          @include clean_list;
-          display: flex;
-          li{
-            margin: 0px 32px 0px 0px;
-            a{
-              text-decoration: none;
-              color: $white;
-              font-size: 18px;
-              line-height: 35px;
-            }
-          }
-        }
-      }
-
-      .cta_button{
-        a{
-          @include cta_button;
         }
       }
     }
@@ -158,65 +93,73 @@ header{
     margin: 0 1%;
     padding-top: 72px;
     display: flex;
-    flex-wrap: wrap;
     align-items: stretch;
     .left_invisible_sidebar{}
     .articles_list{
       display: flex;
       flex-wrap: wrap;
 
-      // If it's Main page
+      // If it's Main page :: Main loop
       .article_item{
-        &:hover{
-          .article_title{
-            h2{
-              color: #40C4FF;
-            }
-          }
-        }
-        text-decoration: none;
-        width: 50%;
-        padding: 0px 25px;
-        margin-bottom: 50px;
-        .article_thumbnail{
-          img{
-            width: 100%;
-            height: auto;
-          }
-        }
-        .article_params{
-          margin-top: 16px;
-          display: flex;
-          justify-content: flex-start;
-          span{
-            line-height: 18px;
-            color: #A0A2B4;
-          }
-          .article_author{
-            flex: 1;
-          }
-        }
-        .article_title{
-          h2{
-            font-weight: 700;
-            color: #040948;
-            font-size: 20px;
-            line-height: 28px;
-            margin-top: 6px;
-          }
-        }
-        .article_description{
-          font-size: 16px;
-          line-height: 22px;
-          color: #040948;
-        }
+        @include show_one_post;
       }
     }
 
     /*
     *  If it's Single POST
     */
+    .left_post_sidebar{
+      display: flex;
+      justify-content: flex-end;
+      .links_container{
+        max-width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+          color: #A0A2B4;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+        }
+        .share_img_link{
+          width: 50px;
+          height: 50px;
+          border-radius: 4px;
+          overflow: hidden;
+          a{
+            display: block;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.fb{
+              background-image: url("../images/share_fb.png");
+              &:hover{
+                background-image: url("../images/share_fb_wh.png");
+                background-color: #403181;
+              }
+            }
+            &.tw{
+              background-image: url("../images/share_twitter.png");
+              &:hover{
+                background-image: url("../images/share_twitter_wh.png");
+                background-color: #40C4FF;
+              }
+            }
+            &.poc{
+              background-image: url("../images/share_pocket.png");
+              &:hover{
+                background-image: url("../images/share_pocket_wh.png");
+                background-color: #F50057;
+              }
+            }
+          }
+        }
+      }
+    }
     .post_description{
+      padding-left: 20px;
+      padding-right: 20px;
       .post_text{
         h2{
           color: #040948;
@@ -361,6 +304,9 @@ header{
         }
       }
     }
+
+  }
+  .row.pagination_section{
     .pagination_links{
       ul{
         @include clean_list;
@@ -384,6 +330,17 @@ header{
             }
           }
         }
+      }
+    }
+  }
+  .feature_posts{
+    margin-top: 52px;
+    div.feature_posts_list{
+      display: flex;
+      .article_item{
+        @include show_one_post;
+        width: 33%;
+        padding: 0px 3%;
       }
     }
   }

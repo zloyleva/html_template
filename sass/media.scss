@@ -1,0 +1,52 @@
+header{
+  nav.navigation_section{
+    .container{
+      @media (max-width: 1024px) {
+        padding-bottom: 30px;
+      }
+      .mobile_section{
+        @media (max-width: 1024px){
+          display: none;
+        }
+        @media (min-width: 1025px){
+          display: flex;
+        }
+      }
+    }
+  }
+  .blog_description{
+    @media (max-width: 1024px){
+      display: none;
+    }
+  }
+}
+
+.container-fluid{
+  .left_invisible_sidebar{
+    @media (max-width: 919px){
+      display: none;
+    }
+  }
+  .right_sidebar{
+    @media (max-width: 763px){
+      display: none;
+    }
+  }
+
+  .col-2{
+    min-width: 210px;
+  }
+  .col-8{
+    flex: 1;
+    .article_item{
+      padding: 0px 3%;
+      width: 100%;
+      @media (min-width: 1200px){
+        width: 50%;
+      }
+
+    }
+  }
+}
+
+
