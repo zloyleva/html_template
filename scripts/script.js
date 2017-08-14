@@ -69,5 +69,17 @@
             $('.search_result_posts').hide();
         }
 
+        $(document).on('click', 'a.hamburger_button', function (event) {
+            event.preventDefault();
+            if($('.mobile_section_move').hasClass('open_menu')){
+                $('.mobile_section_move').removeClass('open_menu');
+                $('body').removeClass('dont_scroll');
+            }else {
+                $('.mobile_section_move').addClass('open_menu');
+                $('body').addClass('dont_scroll');
+            }
+
+        });
+
     });
 })(jQuery);

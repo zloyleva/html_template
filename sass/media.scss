@@ -1,4 +1,7 @@
 header{
+  @media (max-width: 1024px){
+    z-index: 100;
+  }
   nav.navigation_section{
     .container{
       @media (max-width: 1024px) {
